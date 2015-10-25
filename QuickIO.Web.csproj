@@ -293,7 +293,14 @@
     <Content Include="res\QuickIOLogoHead.png" />
     <Content Include="res\screen_1300.css" />
     <Content Include="res\style.css" />
+    <Content Include="views\Examples\Services.html" />
+    <Content Include="views\Examples\Observer.html" />
+    <Content Include="views\Examples\Jobs.html" />
+    <Content Include="views\Examples\Home.html" />
+    <Content Include="views\Examples.html" />
+    <Content Include="views\Home.html" />
     <None Include="bundleconfig.json" />
+    <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\bg\Thumbs.db" />
