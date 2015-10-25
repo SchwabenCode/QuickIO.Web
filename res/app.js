@@ -6,23 +6,23 @@
               .state('Examples', {
                   url: '/Examples',
                   abstract: true,
-                  templateUrl: 'Views/Examples/Examples.html'
+                  templateUrl: 'views/Examples/Examples.html'
               })
               .state('Examples.Home', {
                   url: '',
-                  templateUrl: 'Views/Examples/Home.html'
+                  templateUrl: 'views/Examples/Home.html'
               })
               .state('Examples.Jobs', {
                   url: '/Jobs',
-                  templateUrl: 'Views/Examples/Jobs.html'
+                  templateUrl: 'views/Examples/Jobs.html'
               })
               .state('Examples.Observer', {
                   url: '/Observer',
-                  templateUrl: 'Views/Examples/Observer.html'
+                  templateUrl: 'views/Examples/Observer.html'
               })
               .state('Examples.Services', {
                   url: '/Services',
-                  templateUrl: 'Views/Examples/Services.html'
+                  templateUrl: 'views/Examples/Services.html'
               });
 
       }]
@@ -41,7 +41,7 @@ angular.module('QuickIO', ['QuickIO.Modules.ExampleModule', 'ui.router', 'ngAnim
         $stateProvider
             .state("Home", {
                 url: "/",
-                templateUrl: 'Views/Home.html',
+                templateUrl: 'views/Home.html',
             });
     }]
 );
