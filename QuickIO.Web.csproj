@@ -294,6 +294,7 @@
     <Content Include="res\screen_1300.css" />
     <Content Include="res\style.css" />
     <None Include="bundleconfig.json" />
+    <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\bg\Thumbs.db" />
