@@ -1,0 +1,996 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js" data-ng-app="QuickIO">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="QUickIO.NET, QuickIO, Performance, Ms-PL, Open Source, NuGet, Library, SchwabenCode, Benjamin Abt">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>QuickIO.NET - Project Homepage</title>
+    <!-- Font -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!-- main JS libs  -->
+    <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/respond/1.2.0/respond.js"></script>
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular-animate.min.js"></script>
+
+    <!-- Style CSS-->
+    <link href="res/style.css" media="screen" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="res/screen_1300.css" />
+
+    <!-- custom CSS -->
+    <link href="res/custom.css" rel="stylesheet">
+
+    <!-- mods -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- scripts  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="res/general.js"></script>
+
+    <!-- App -->
+    <script src="res/app.js"></script>
+</head>
+<body>
+    <div class="body_wrap">
+        <!-- header top bar -->
+        <div class="header_top">
+            <div class="container">
+                <a ui-sref="Home">
+                    <img src="res/QuickIOLogoHead.png" height="50" style="float: left; margin-right: 20px; margin-top: 10px;" />
+                </a>
+                <div class="logo">
+                    <h2>
+                        <a ui-sref="Home">QuickIO<span>.NET</span></a>
+                    </h2> <a href="http://www.benjamin-abt.com/" target="_blank" style="font-size: 12px">
+                        by Benjamin Abt
+                    </a>
+                </div>
+                <div style="float:right;">
+                    <ul class="dropdown">
+                        <li class="menu-level-0"><a ui-sref="Home"><span>Home</span></a></li>
+                        <li class="menu-level-0"><a href="https://github.com/SchwabenCode/QuickIO" target="_blank"><span>Source</span></a></li>
+                        <li class="menu-level-0">
+                            <a ui-sref="Examples.Home"><span>Examples</span></a>
+                            <ul class="submenu-2">
+                                <li class="menu-level-2"><a ui-sref="Examples.Jobs"><span>Jobs</span></a></li>
+                                <li class="menu-level-2"><a ui-sref="Examples.Observer"><span>Observer</span></a></li>
+                                <li class="menu-level-2"><a ui-sref="Examples.Services"><span>Services</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-level-0"><a href="http://www.benjamin-abt.com" target="_blank"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--/ header top bar -->
+        <div class="cwrap">
+            <!-- header -->
+            <div class="header header_thin">
+                <div class="container">
+                    <div class="header-title">
+                        <h1 style="font-size: 1.8em;">QuickIO.NET provides an enhanced performance for file operations</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="middle" class="cols2">
+                <div class="container">
+                    <div class="content " role="main" ui-view></div>
+                    <div class="sidebar">
+                        <div class="widget-container widget_categories">
+                            <h3 class="widget-title">QuickIO.NET News</h3>
+                            <a href="http://www.dotnetpro.de/articles/articlearchive1799.aspx" target="_blank"><img src="images/dnp_082014.jpg" style="float:left;" /></a>
+                            <p style="margin:10px; padding: 3px;">
+                                In the copy 08/2014 of the developer magazine "dotnetpro" Fabian Deitelhoff writes about QuickIO.NET.
+                                <br />He praises the professional implementation and recommends QuickIO.NET for your I/O tasks.
+                            </p>
+                            <p style="margin:10px;">
+                                <a href="http://www.dotnetpro.de/articles/articlearchive1799.aspx" target="_blank">View dotnetpro</a>
+                            </p>
+                        </div>
+                        <div class="widget-container widget_categories">
+                            <h3 class="widget-title">Support QuickIO</h3>
+
+                            <p style="margin:10px;">
+                                When you have new ideas or found an error, so please use <a href="https://quickio.codeplex.com/discussions" target="_blank">QuickIO's CodePlex</a> site.
+                            </p>
+                            <p style="margin:10px;">
+                                I reject financial support.<br />
+                                Instead - if you want - please donate a small financial contribution to the <a href="http://www.tierheim-stuttgart.de" target="_blank">animal shelter of Stuttgart</a>.
+                            </p>
+                        </div>
+                        <div class="widget-container widget_categories">
+                            <h3 class="widget-title">Quick</h3>
+                            <ul>
+                                <li><a href="http://Quickio.NET/help" target="_blank"><span>Online Help <small>(Documentation)</small></span></a></li>
+                                <li><a href="https://Quickio.CodePlex.com/discussions" target="_blank"><span>Discussions &amp; Feedback</span></a></li>
+                                <li><a href="https://www.nuget.org/packages/QuickIO.NET/" target="_blank"><span>NuGet</span></a></li>
+                                <li><a href="https://quickio.codeplex.com/" target="_blank"><span>CodePlex</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="widget-container widget_categories">
+                            <h3 class="widget-title">Other Projects</h3>
+                            <ul>
+                                <li><a href="https://www.nuget.org/packages/MVCRouteCache/" target="_blank"><span>MVCRouteCache</span></a></li>
+                                <li><a href="https://www.nuget.org/packages/SchwabenCode.EasySmtp/" target="_blank"><span>EasySMTP</span></a></li>
+                                <li><a href="https://www.nuget.org/packages/SchwabenCode.MongoDBInfrastructure/" target="_blank"><span>MongoDB Infrastructure</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footbg">
+            <div class="container clearfix">
+
+                <div class="copyright">QuickIO.NET by <a href="http://www.benjamin-abt.com" target="_blank">Benjamin Abt</a> - 2014 - <a href="http://benjamin-abt.com/blog/impressum/" target="_blank">Impressum/Imprint</a> - <a href="http://benjamin-abt.com/blog/datenschutzerklarung/" target="_blank">Privacy/Datenschutz</a></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Templates -->
+    <script type="text/ng-template" id="PartialViews/Home.html">
+        <div class="postlist clearfix">
+            <div class="post-item ">
+                <div class="post-title"><h1>QuickIO.NET</h1></div>
+                <div class="post-desc clearfix">
+                    <p>
+                        QuickIO.NET is an extension for the .NET Framework to provide faster file operations.<br />
+                        To offer you a simple use and an easy integration QuickIO.NET methods lean against the ones provided by the .NET Framework.
+                    </p>
+                    <p>
+                        <strong>Requirements</strong>
+                        .NET 2.0 or higher<br />
+                        <strong>License</strong>
+                        <a href="http://quickio.codeplex.com/license" target="_blank">Microsoft Public License (Ms-PL)</a><br />
+                    </p>
+                </div>
+            </div>
+            <div class="post-item ">
+                <div class="post-title"><h2>Main features</h2></div>
+                <div class="post-desc clearfix">
+                    <ul class="feature">
+                        <li>
+                            &rArr;&nbsp; <strong>Much</strong> faster browsing of folder structures (up to 30x faster)
+                        </li>
+                        <li>
+                            &rArr;&nbsp; Lightning-fast retrieve of <strong>metadata</strong> of folders, files, and directory structures
+                        </li>
+                        <li>
+                            &rArr;&nbsp; File chunk support for reading, comparisons and hashing.
+                        </li>
+                        <li>
+                            &rArr;&nbsp; Data transfer services <strong>monitored file and directory copy/move with progress events</strong>
+                        </li>
+                        <li>
+                            &rArr;&nbsp; Custom service and job support (via extensions and own implementation)
+                        </li>
+                        <li>
+                            &rArr;&nbsp; <strong>Long path support</strong> (UNC paths) up to 32767 characters
+                        </li>
+                        <li>
+                            &rArr;&nbsp; Calculate <strong>checksums of files and file chunks</strong>
+                        </li>
+                        <li>
+                            &rArr;&nbsp; Fully tested source code using UnitTests
+                        </li>
+                        <li>
+                            &rArr;&nbsp; Nearly identical signature of methods. So a simple replacement is possible
+                        </li>
+                        <li>
+                            &rArr;&nbsp; <strong>Async</strong> Operations (requires .NET 4.0)
+                        </li>
+                        <li>
+                            &rArr;&nbsp; Multiple releases from .NET 2.0 to .NET 4.5
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post-item ">
+                <div class="post-title"><h2>License</h2></div>
+                <div class="post-desc clearfix">
+                    <p>
+                        QuickIO.NET is published under <a href="https://quickio.codeplex.com/license" target="_blank">Microsoft Public License</a>.
+                    </p>
+                    <p>
+                        QuickIO.NET is completely free for private and commerical usage.<br />
+                        There are no instructions on the use of QuickIO.NET prescribed; I would nevertheless happy about a nomination.
+                    </p>
+                </div>
+            </div>
+            <div class="post-item ">
+                <div class="post-title"><h2>Performance Comparison</h2></div>
+                <div class="post-desc clearfix">
+                    <p>
+                        QuickIO.NET avoids unnecessary, duplicate checks and can provide an increased performance compared to standard methods of the .NET framework.
+                    </p>
+                    <p><img title="Performance Comparison" alt="Performance Comparison" class="comparisonpic" src="res/netperfcomparison.png"></p>
+                </div>
+            </div>
+            <div class="post-item ">
+                <div class="post-title"><h2>Download</h2></div>
+                <div class="post-desc clearfix">
+                    <p>Download the latest version of QuickIO.NET <a href="https://quickio.codeplex.com/releases" target="_blank"><strong>here</strong></a> or use <a href="https://www.nuget.org/packages/QuickIO.NET/" target="_blank">NuGet:</a></p>
+                    <p class="nugetbox">
+                        <code>
+                            PM &gt; Install-Package QuickIO.NET
+                        </code>
+                    </p>
+                </div>
+            </div>
+            <div class="post-item ">
+                <div class="post-title"><h2>Mono</h2></div>
+                <div class="post-desc clearfix">
+                    <p>
+                        I am a software developer with focused on high-performance web applications in ASP.NET, clouds and Microsoft Azure.
+                        <br />I have no contact with Linux environments. Therefore, I have lost track of Mono support.<br />
+                        If someone agreed to integrate Mono support, so please get in touch with me.
+                    </p>
+                </div>
+            </div>
+            <div class="post-item ">
+                <div class="post-title"><h2>Code Support</h2></div>
+                <div class="post-desc clearfix">
+                    <p>
+                        Please do not contact me if you have trouble with QuickIO by email.
+                        <br />
+                        Report bugs only on <a href="https://quickio.codeplex.com/discussions" target="_blank">QuickIO's CodePlex</a> site.
+                    </p>
+                    <p>
+                        For integration support into your application use QuickIO's OnlineHelp or a forum of your choice.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </script>
+    <script type="text/ng-template" id="PartialViews/Source.html">
+        <div class="postlist clearfix">
+            <div class="post-item ">
+                <div class="post-title">
+                    <h2>Source Code</h2>
+                </div>
+                <div class="post-desc clearfix">
+                    <p>
+                        The source code of the QuickIO.NET is available for downloading <a href="https://quickio.codeplex.com/" target="_blank">CodePlex</a>.
+                        <br />
+                        I'm using automatisms like T4 code generation to automatically generate individual parts of the source code and avoid redundancies during the development.<br />
+                        However, this T4 files are not available to the public.
+                    </p>
+                    <p>
+                        The UnitTest projects currently are not available. Maybe I will publish this at a later date.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/ng-template" id="PartialViews/Examples/Examples.html">
+        <div ui-view></div>
+
+    </script>
+    <script type="text/ng-template" id="PartialViews/Examples/Home.html">
+        <div class="post-item ">
+            <div class="post-title"><h2>Examples - Part #1</h2></div>
+            <div class="post-desc clearfix">
+                <h3>Enumerate folder contents</h3>
+                <pre><code>// Get subfolders
+IEnumerable< QuickIODirectoryInfo > allSubFolders = 
+                   QuickIODirectory.EnumerateDirectories( @"C:\temp\QuickIO", SearchOption.AllDirectories );
+foreach ( QuickIODirectoryInfo directoryInfo in allSubFolders )
+{     
+   Console.WriteLine( "Directory found: {0} Readonly: {1}", directoryInfo.FullName, directoryInfo.IsReadOnly );
+}
+                </code></pre>
+                <br />
+                <pre><code>// Get subfiles
+IEnumerable< QuickIOFileInfo > allSubFiles = QuickIODirectory.EnumerateFiles( @"C:\temp\QuickIO", SearchOption.AllDirectories );
+foreach ( QuickIOFileInfo fileInfo in allSubFiles )
+{     
+   Console.WriteLine( "File found: {0} Readonly: {1}", fileInfo.FullName, fileInfo.IsReadOnly );
+}
+            </code></pre>
+                <br />
+                <pre><code>// Get all with one call
+IEnumerable< KeyValuePair< QuickIOPathInfo, QuickIOFileSystemEntryType > > allSubEntries = QuickIODirectory.EnumerateFileSystemEntries( @"C:\temp\QuickIO", SearchOption.AllDirectories ); 
+foreach ( KeyValuePair< QuickIOPathInfo, QuickIOFileSystemEntryType > subEntry in allSubEntries )
+{     
+   var pathInfo = subEntry.Key;     
+   var type = subEntry.Value;     
+    Console.WriteLine( "Entry found: {0} Readonly: {1}", pathInfo.FullName, type );
+}
+            </code></pre>
+                <br />
+                <h5>More examples are on the <a href="http://quickio.codeplex.com/documentation" target="_blank">CodePlex QuickIO.NET project site</a> or available in the <a href="http://quickIO.NET/help" target="_blank">official online help</a>.</h5>
+            </div>
+        </div>
+
+        <div class="post-item ">
+
+            <div class="post-title"><h2>Examples - Part #2</h2></div>
+
+            <div class="post-desc clearfix">
+
+                <h3>Permanent watching service for file copy operations with progress information</h3>
+                <pre><code>// Example of QuickIO Background Transfer service
+ 
+class Program
+{
+    const string dropDirectory = @"C:\transfer_test\dropfolder";
+    const string pictureFolder = @"C:\transfer_test\pictures";
+    const string movieFolder = @"C:\transfer_test\movies";
+ 
+ 
+    protected static QuickIOTransferBackgroundService TransferBackgroundService = new QuickIOTransferBackgroundService( workerCount: 2, maxFileRetry: 5 );
+    protected static FileSystemWatcher PictureWatcher = new FileSystemWatcher( dropDirectory, "*.png" );
+    protected static FileSystemWatcher MovieWatcher = new FileSystemWatcher( dropDirectory, "*.mp4" );
+ 
+    static void Main( string[ ] args )
+    {
+        // events to watch on filesystem
+        PictureWatcher.Created += OnCreated_Picture;
+        MovieWatcher.Created += OnCreated_MovieFile;
+ 
+        // Event definitions
+        TransferBackgroundService.JobEnqueued += OnJobEnqueued;
+        TransferBackgroundService.JobDequeued += OnJobDequeued;
+        TransferBackgroundService.JobRequeued += OnJobRequeued;
+        TransferBackgroundService.WorkerPickedJob += OnServiceWorkerPickedJob;
+ 
+        TransferBackgroundService.WorkerCreated += OnServiceWorkerCreated;
+        TransferBackgroundService.WorkerStarted += OnServiceWorkerStarted;
+        TransferBackgroundService.WorkerPickedJob += OnServiceWorkerPickedJob;
+ 
+        TransferBackgroundService.FileCopyStarted += OnFileCopyStarted;
+        TransferBackgroundService.FileCopyProgress += OnFileCopyProgress;
+        TransferBackgroundService.FileCopyFinished += OnFileCopyFinished;
+ 
+        // start service, if autostart is false
+        TransferBackgroundService.StartService( );
+ 
+        Console.WriteLine( "Service is running." );
+        Console.ReadKey( ); // wait to finish, blocks here
+ 
+        // Ends on key input
+    }
+ 
+    /// &lt;summary&gt;
+    /// worker started
+    /// &lt;/summary&gt;
+    private static void OnServiceWorkerStarted( object sender, QuickIOTransferWorkerStartedEventArgs e )
+    {
+        Console.WriteLine( "[!] Worker Started. ID: " + e.WorkerID );
+    }
+ 
+    /// &lt;summary&gt;
+    /// new worker
+    /// &lt;/summary&gt;
+    static void OnServiceWorkerCreated( object sender, QuickIOTransferWorkerCreatedEventArgs e )
+    {
+        Console.WriteLine( "[!] New Worker. ID: " + e.WorkerID );
+    }
+ 
+    /// &lt;summary&gt;
+    /// worker catched a job
+    /// &lt;/summary&gt;
+    static void OnServiceWorkerPickedJob( object sender, QuickIOTransferWorkerPickedJobEventArgs e )
+    {
+        Console.WriteLine( "[!] Worker ID# " + e.WorkerID + " picked job: " + e.GetType( ) );
+    }
+ 
+    /// &lt;summary&gt;
+    /// job was broken by an exception, but requred
+    /// &lt;/summary&gt;
+    static void OnJobRequeued( object sender, QuickIOTransferJobRequeuedArgs e )
+    {
+        Console.WriteLine( "[JOB REQUEUED] Try: #" + e.Job.CurrentRetryCount + " - " + e.Job.GetType( ) + " failed: " + e.Exception.Message );
+    }
+ 
+    /// &lt;summary&gt;
+    /// Report of job was taken from queue
+    /// &lt;/summary&gt;
+    static void OnJobDequeued( object sender, QuickIOTransferJobDequeuedArgs e )
+    {
+        Console.WriteLine( "[JOB DEQUEUED] " + e.Job.GetType( ) );
+    }
+ 
+    /// &lt;summary&gt;
+    /// Report for new jobs
+    /// &lt;/summary&gt;
+    static void OnJobEnqueued( object sender, QuickIOTransferJobEnqueuedArgs e )
+    {
+        Console.WriteLine( "[NEW JOB] " + e.Job.GetType( ) );
+    }
+ 
+    /// &lt;summary&gt;
+    /// Progress Report
+    /// &lt;/summary&gt;
+    static void OnFileCopyStarted( object sender, QuickIOTransferFileCopyStartedArgs args )
+    {
+        Console.WriteLine( ">>>>>> STARTED " + args.SourcePath + " to " + args.TargetPath );
+    }
+ 
+    /// &lt;summary&gt;
+    /// Progress Report
+    /// &lt;/summary&gt;
+    static void OnFileCopyFinished( object sender, QuickIOTransferFileCopyFinishedArgs args )
+    {
+        Console.WriteLine( ">>>>>> FINISHED " + args.SourcePath + " to " + args.TargetPath + " - MB/s: " + ( args.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+    /// &lt;summary&gt;
+    /// Progress Report
+    /// &lt;/summary&gt;
+    static void OnFileCopyProgress( object sender, QuickIOTransferFileCopyProgressArgs args )
+    {
+        Console.WriteLine( "Transfering " + args.SourcePath + " to " + args.TargetPath + " - %: " + args.Percentage + " MB/s: " + ( args.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+ 
+    /// &lt;summary&gt;
+    /// Copy movie file from drop folder to internal movie folder
+    /// &lt;/summary&gt;
+    static void OnCreated_MovieFile( object sender, FileSystemEventArgs e )
+    {
+        var queueItem = new QuickIOTransferFileCopyJob( e.FullPath, movieFolder, overwrite: true );
+        TransferBackgroundService.Add( queueItem );
+    }
+ 
+    /// &lt;summary&gt;
+    /// Copy picture file from drop folder to internal picture folder
+    /// &lt;/summary&gt;
+    static void OnCreated_Picture( object sender, FileSystemEventArgs e )
+    {
+        var queueItem = new QuickIOTransferFileCopyJob( e.FullPath, pictureFolder, overwrite: true, parentExistanceCheck: false );
+        TransferBackgroundService.Add( queueItem );
+    }
+}
+            </code></pre>
+                <br />
+            </div>
+        </div>
+        <div class="post-item ">
+            <div class="post-title"><h2>Examples - Part #3</h2></div>
+            <div class="post-desc clearfix">
+
+                <h3>Copy directory with monitoring and progress information</h3>
+                <pre><code>
+static void Main( string[ ] args )
+{
+    const string sourceDirectory = @"C:\transfer_test\source";
+    const string targetDirectory = @"C:\transfer_test\to";
+    // With observer
+    IQuickIOTransferObserver observer = new QuickIOTransferObserver( );
+    var service = new QuickIOTransferDirectoryCopyService( observer, new QuickIODirectoryInfo( sourceDirectory ), targetDirectory, threadCount: 1, retryCount: 3, searchOption: SearchOption.AllDirectories, overwrite: true );
+    // or without overload, to use default internal observer
+    // var service = new QuickIOTransferDirectoryCopyService( new QuickIODirectoryInfo( sourceDirectory ), targetDirectory, threadCount: 1, retryCount: 3, searchOption: SearchOption.AllDirectories, overwrite: true );
+    //  Progress information
+    service.Observer.DirectoryCreationError += ObserverOnDirectoryCreationError;
+    service.Observer.FileCopyStarted += OnFileCopyStarted;
+    service.Observer.FileCopyProgress += OnFileCopyProgress;
+    service.Observer.FileCopyFinished += OnFileCopyFinished;
+    service.Observer.FileCopyError += ObserverOnFileCopyError;
+    // Same as (observer events are called first!):
+    service.FileCopyStarted += OnFileCopyStarted;
+    service.FileCopyProgress += OnFileCopyProgress;
+    service.FileCopyFinished += OnFileCopyFinished;
+    service.FileCopyError += ObserverOnFileCopyError;
+    // Start progress
+    service.Start( ); // Blocks thread until finished
+    Console.WriteLine( "Finished" );
+    Console.ReadKey( );
+}
+private static void ObserverOnDirectoryCreationError( object sender, QuickIOTransferDirectoryCreationErrorEventArgs e )
+{
+    Console.WriteLine( "Error: Dir create '" + e.TargetPath + "' failed: " + e.Exception.Message );
+}
+private static void ObserverOnFileCopyError( object sender, QuickIOTransferFileCopyErrorEventArgs e )
+{
+    Console.WriteLine( "Error: " + e.SourcePath + " to " + e.TargetPath + ": " + e.Exception.Message );
+}
+private static void OnFileCopyStarted( object sender, QuickIOTransferFileCopyStartedEventArgs e )
+{
+    Console.WriteLine( "Started: " + e.SourcePath + " to " + e.TargetPath + " (Bytes: " + e.TotalBytes + ")" );
+}
+private static void OnFileCopyFinished( object sender, QuickIOTransferFileCopyFinishedEventArgs e )
+{
+    Console.WriteLine( "Finished: " + e.SourcePath + " - MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+}
+private static void OnFileCopyProgress( object sender, QuickIOTransferFileCopyProgressEventArgs e )
+{
+    Console.WriteLine( "Progress: " + e.SourcePath + " - %: " + e.Percentage + " MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+}
+            </code></pre>
+                <br />
+            </div>
+        </div>
+        <div class="post-item ">
+            <div class="post-title"><h2>Examples - Part #4</h2></div>
+            <div class="post-desc clearfix">
+                <h3>Copy file(s) with monitoring and progress information</h3>
+                <pre><code>        /// class Program
+{
+    static void Main( string[ ] args )
+    {
+       const string sourceDirectory = @"C:\transfer_test\source";
+       const string targetDirectory = @"C:\transfer_test\to";
+       // search file
+       var file = new QuickIOFileInfo( "file" );
+       var service = new QuickIOTransferFileCopyService( file, targetDirectory, threadCount: 1, retryCount: 3, overwrite: true );
+       
+       //  Progress information
+       service.Observer.FileCopyStarted += OnFileCopyStarted;
+       service.Observer.FileCopyProgress += OnFileCopyProgress;
+       service.Observer.FileCopyFinished += OnFileCopyFinished;
+       service.Observer.FileCopyError += ObserverOnFileCopyError;
+       // Same as (observer events are called first!):
+       //service.FileCopyStarted += OnFileCopyStarted;
+       //service.FileCopyProgress += OnFileCopyProgress;
+       //service.FileCopyFinished += OnFileCopyFinished;
+       //service.FileCopyError += ObserverOnFileCopyError;
+       
+       // Start progress
+       service.Start( ); // Blocks thread until finished
+       
+       Console.WriteLine( "Finished" );
+       Console.ReadKey( );
+    }
+    private static void ObserverOnFileCopyError( object sender, QuickIOTransferFileCopyErrorEventArgs e )
+    {
+       Console.WriteLine( "Error: " + e.SourcePath + " to " + e.TargetPath + ": " + e.Exception.Message );
+    }
+    private static void OnFileCopyStarted( object sender, QuickIOTransferFileCopyStartedEventArgs e )
+    {
+       Console.WriteLine( "Started: " + e.SourcePath + " to " + e.TargetPath + " (Bytes: " + e.TotalBytes + ")" );
+    }
+    private static void OnFileCopyFinished( object sender, QuickIOTransferFileCopyFinishedEventArgs e )
+    {
+       Console.WriteLine( "Finished: " + e.SourcePath + " - MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+    private static void OnFileCopyProgress( object sender, QuickIOTransferFileCopyProgressEventArgs e )
+    {
+       Console.WriteLine( "Progress: " + e.SourcePath + " - %: " + e.Percentage + " MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+}
+            </code></pre>
+                <br />
+            </div>
+        </div>
+
+    </script>
+    <script type="text/ng-template" id="PartialViews/Examples/Jobs.html">
+        <div class="post-item ">
+            <div class="post-title">
+                <h2>Jobs</h2>
+            </div>
+            <div class="post-desc clearfix">
+                <p>
+                    A job is a defined task (file copy, file create...), inhertis from <a href="http://quickio.net/help/#type/QuickIOTransferJob" target="_blank">QuickIOTransferJob</a> and has no dependencies.
+                    <br />
+                    However, he can pass his information (ex. progress) to an optional observer.
+                </p>
+                <pre><code>// For example the observer information behavior of file creation progress
+private void OnCopyProgress( Int64 totalBytes, UInt64 bytesTransfered )
+{
+    QuickIOTransferFileCopyProgressEventArgs args = null;
+    if ( Progress != null )
+    {
+        args = new QuickIOTransferFileCopyProgressEventArgs( this, Source, Target, totalBytes,
+                      bytesTransfered, ( DateTime ) TransferStarted );
+        Progress( this, args );
+    }
+    if ( Observer != null )
+    {
+        if ( args == null )
+        {
+            args = new QuickIOTransferFileCopyProgressEventArgs( this, Source, Target, totalBytes, 
+                           bytesTransfered, ( DateTime ) TransferStarted );
+        }
+        Observer.OnFileCopyProgress( args );
+    }
+}
+       </code></pre>
+            </div>
+            <hr />
+            <div class="post-desc clearfix">
+                <p>
+                    <a href="http://quickio.net/help/#type/QuickIOTransferJob" target="_blank">QuickIOTransferJob</a> requires the custom implementation of <a href="http://quickio.net/help/#type/QuickIOTransferJob?Implementation3" target="_blank">Implementation-Method</a>, in which the logic of the task must be implemented.
+                    The action is performed using the method <a href="http://quickio.net/help/#type/QuickIOTransferJob?Run2" target="_blank">Run</a>; starting with the .NET 4.0 the method <a href="http://quickio.net/help/#type/QuickIOTransferJob?RunAsync2" target="_blank">RunAsync</a> is available, too.<br />
+                </p>
+                <pre><code>// For example the job implementation of CreateDirectory       
+protected override void Implementation( )
+{
+    OnDirectoryCreating( );
+    if ( !QuickIODirectory.Exists( DirectoryToCreatePath ) )
+    {
+        QuickIODirectory.Create( DirectoryToCreatePath, true );
+    }
+    OnDirectoryCreated( );
+}
+       </code></pre>
+            </div>
+            <hr />
+            <div class="post-desc clearfix">
+                <p>
+                    <a href="http://quickio.net/help/#type/QuickIOTransferJob?Run2" target="_blank">Run</a> passes the status of "Start", "End" and "Error" to the respective event interfaces, which can be overridden in your own job classes.
+                </p>
+                <pre><code>// Implementation of Run()
+public void Run( )
+{
+    var started = DateTime.Now;
+    OnRun( started );
+    try
+    {
+        Implementation( );
+    }
+    catch ( Exception e )
+    {
+        OnError( e );
+        throw;
+    }
+    OnEnd( started, DateTime.Now );
+}
+        </code></pre>
+                <br />
+
+            </div>
+        </div>
+
+        <div class="post-item ">
+            <div class="post-desc clearfix">
+                <p>
+                    For more information please see the appropriate documentation or - if necessary - the <a ui-sref="Source">source code</a>.
+                </p>
+                <p>
+                    I've spent really much time in the detailed documentation of QuickIO.NET and will continue.<br />
+                    Please read the <a href="http://quickio.net/help/" target="_blank">documentation</a> before you opened a new topic in the dicusccion area.<br />
+                </p>
+                <p>
+                    Thank you very much.
+                </p>
+
+            </div>
+        </div>
+
+    </script>
+    <script type="text/ng-template" id="PartialViews/Examples/Observer.html">
+        <div class="post-item ">
+            <div class="post-title">
+                <h2>Observer</h2>
+            </div>
+            <div class="post-desc clearfix">
+                <p>
+                    A QuickIO <a href="http://quickio.net/help/#type/QuickIOTransferObserver" target="_blank">observer</a> is a central contact point and allows the condition monitoring of QuickIO.NET <a ui-sref="Examples.Services">services</a> and QuickIO <a ui-sref="Examples.Jobs">jobs</a>.<br />
+                    It is possible to create an own observer by inherit from <a href="http://quickio.net/help/#type/IQuickIOTransferObserver" target="_blank">IQuickIOTransferObserver</a> and <a href="http://quickio.net/help/#type/QuickIOTransferObserver" target="_blank">QuickIOTransferObserver</a> to monitor your own services and jobs at a central point and gather all information.
+                </p>
+                <p>
+                    Another advantage of the QuickIO.NET observer architecture is the simple testing with
+                    <a href="http://msdn.microsoft.com/en-us/library/ff650441.aspx" target="_blank">mock-objects</a>.
+                </p>
+                <p>Sample for an own observer with custom event</p>
+                <pre><code>
+/// &lt;summary&gt;
+/// My observer interface
+/// &lt;/summary&gt;
+public interface IMyExampleObserver : IQuickIOTransferObserver
+{
+    /// &lt;summary&gt;
+    /// Description of MyEvent
+    /// &lt;/summary&gt;
+    event MyExampleObserver.MyCustomEventHandler MyEvent;
+    /// &lt;summary&gt;
+    /// Fire &lt;see cref="MyExampleObserver.MyEvent" />
+    /// &lt;/summary&gt;
+    void OnMyEvent( );
+}
+/// &lt;summary&gt;
+/// my observer implementation
+/// &lt;/summary&gt;
+public class MyExampleObserver : QuickIOTransferObserver, IMyExampleObserver
+{
+    /// &lt;summary&gt;
+    /// Delegate for &lt;see cref="MyEvent" />
+    /// &lt;/summary&gt;
+    public delegate void MyCustomEventHandler( object sender, EventArgs e );
+    /// &lt;summary&gt;
+    /// Description of MyEvent
+    /// &lt;/summary&gt;
+    public event MyCustomEventHandler MyEvent;
+    /// &lt;summary&gt;
+    /// Fire &lt;see cref="MyEvent" />
+    /// &lt;/summary&gt;
+    public virtual void OnMyEvent( )
+    {
+        if ( MyEvent != null )
+        {
+            MyEvent( this, EventArgs.Empty );
+        }
+    }
+    /// &lt;summary&gt;
+    /// For example we want to log each worker creation, but  the keep the default behavior
+    /// &lt;/summary&gt;
+    public override void OnWorkerCreated( QuickIOTransferWorkerCreatedEventArgs args )
+    {
+        base.OnWorkerCreated( args );
+        QuickIOFile.AppendAllText( "Log_WorkerCreation.log", String.Format( "[{0}] NEW WORKER: {1} ", DateTime.Now, args.WorkerID ) );
+    }
+}
+/// &lt;summary&gt;
+/// Example usage of own observer
+/// &lt;/summary&gt;
+public class Program
+{
+    /// &lt;summary&gt;
+    /// Program implementation
+    /// &lt;/summary&gt;
+    public static void OwnObserverExample( )
+    {
+        var myObserver = new MyExampleObserver( );
+        var service1 = new QuickIOTransferBackgroundService( myObserver, workerCount: 1 );
+        var service2 = new QuickIOTransferBackgroundService( myObserver, workerCount: 4 );
+        var directoryCopyService = new QuickIOTransferDirectoryCopyService( myObserver, new QuickIODirectoryInfo( @"C:\temp" ), @"C:\temp_testtarget" );
+        // service usage here
+    }
+}
+</code></pre>
+            </div>
+        </div>
+
+    </script>
+    <script type="text/ng-template" id="PartialViews/Examples/Services.html">
+        <div class="post-item ">
+            <div class="post-title">
+                <h2>Services</h2>
+            </div>
+            <div class="post-desc clearfix">
+                <p>
+                    A QuickIO.NET service is an instance for processing multiple <a ui-sref="Examples.Jobsd">jobs</a>. QuickIO.NET services offer multiple workers (Threads), to enable parallel processing for jobs.<br />
+                    As well, the priority that a job has, is observed during the processing.
+                </p>
+                <p>
+                    By default QuickIO.NET offers three different services.
+                </p>
+            </div>
+            <div class="post-desc clearfix">
+                <h4><strong>BackgroundService</strong> <small><a href="http://quickio.net/help/#type/QuickIOTransferBackgroundService" target="_blank">(online help link)</a></small></h4>
+                <p>
+                    processes all jobs, until the queue is manually finalized or service is killed by user.<br />
+                    If no jobs is in queue all workers wait as long as no new elements is added to the queue. The cpu will not be charged in sleep-mode!<br />
+                </p>
+                <pre><code>
+class Program
+{
+    const string dropDirectory = @"C:\transfer_test\dropfolder";
+    const string pictureFolder = @"C:\transfer_test\pictures";
+    const string movieFolder = @"C:\transfer_test\movies";
+    protected static QuickIOTransferBackgroundService TransferBackgroundService = new QuickIOTransferBackgroundService( workerCount: 2, maxFileRetry: 5 );
+    protected static FileSystemWatcher PictureWatcher = new FileSystemWatcher( dropDirectory, "*.png" );
+    protected static FileSystemWatcher MovieWatcher = new FileSystemWatcher( dropDirectory, "*.mp4" );
+    static void Main( string[ ] args )
+    {
+        PictureWatcher.Created += OnCreated_Picture;
+        MovieWatcher.Created += OnCreated_MovieFile;
+        TransferBackgroundService.Enqueued += OnJobEnqueued;
+        TransferBackgroundService.Dequeued += OnJobDequeued;
+        TransferBackgroundService.Requeued += JobRequeued;
+        TransferBackgroundService.WorkerPickedJob += OnServiceWorkerPickedJob;
+        TransferBackgroundService.WorkerCreated += OnServiceWorkerCreated;
+        TransferBackgroundService.WorkerStarted += OnServiceWorkerStarted;
+        TransferBackgroundService.WorkerPickedJob += OnServiceWorkerPickedJob;
+        TransferBackgroundService.Started += OnFileCopyStarted;
+        TransferBackgroundService.Progress += OnFileCopyProgress;
+        TransferBackgroundService.Finished += OnFileCopyFinished;
+        TransferBackgroundService.StartWorking( );
+        Console.WriteLine( "Service is running." );
+        Console.ReadKey( );
+        // Ends on key input
+    }
+    /// &lt;summary&gt;
+    /// worker started
+    /// &lt;/summary&gt;
+    private static void OnServiceWorkerStarted( object sender, QuickIOTransferWorkerStartedEventArgs e )
+    {
+        Console.WriteLine( "[!] Worker Started. ID: " + e.WorkerID );
+    }
+    /// &lt;summary&gt;
+    /// new worker
+    /// &lt;/summary&gt;
+    static void OnServiceWorkerCreated( object sender, QuickIOTransferWorkerCreatedEventArgs e )
+    {
+        Console.WriteLine( "[!] New Worker. ID: " + e.WorkerID );
+    }
+    /// &lt;summary&gt;
+    /// worker catched a job
+    /// &lt;/summary&gt;
+    static void OnServiceWorkerPickedJob( object sender, QuickIOTransferWorkerPickedJobEventArgs e )
+    {
+        Console.WriteLine( "[!] Worker ID# " + e.WorkerID + " picked job: " + e.GetType( ) );
+    }
+    /// &lt;summary&gt;
+    /// job was broken by an exception, but requred
+    /// &lt;/summary&gt;
+    static void JobRequeued( object sender, QuickIOTransferJobRequeuedArgs e )
+    {
+        Console.WriteLine( "[JOB REQUEUED] Try: #" + e.Job.CurrentRetryCount + " - " + e.Job.GetType( ) + " failed: " + e.Exception.Message );
+    }
+    /// &lt;summary&gt;
+    /// Report of job was taken from queue
+    /// &lt;/summary&gt;
+    static void OnJobDequeued( object sender, QuickIOTransferJobDequeuedArgs e )
+    {
+        Console.WriteLine( "[JOB DEQUEUED] " + e.Job.GetType( ) );
+    }
+    /// &lt;summary&gt;
+    /// Report for new jobs
+    /// &lt;/summary&gt;
+    static void OnJobEnqueued( object sender, QuickIOTransferJobEnqueuedArgs e )
+    {
+        Console.WriteLine( "[NEW JOB] " + e.Job.GetType( ) );
+    }
+    /// &lt;summary&gt;
+    /// Progress Report
+    /// &lt;/summary&gt;
+    static void OnFileCopyStarted( object sender, QuickIOTransferFileCopyStartedArgs args )
+    {
+        Console.WriteLine( ">>>>>> STARTED " + args.SourcePath + " to " + args.TargetPath );
+    }
+    /// &lt;summary&gt;
+    /// Progress Report
+    /// &lt;/summary&gt;
+    static void OnFileCopyFinished( object sender, QuickIOTransferFileCopyFinishedArgs args )
+    {
+        Console.WriteLine( ">>>>>> FINISHED " + args.SourcePath + " to " + args.TargetPath + " - MB/s: " + ( args.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+    /// &lt;summary&gt;
+    /// Progress Report
+    /// &lt;/summary&gt;
+    static void OnFileCopyProgress( object sender, QuickIOTransferFileCopyProgressArgs args )
+    {
+        Console.WriteLine( "Transfering " + args.SourcePath + " to " + args.TargetPath + " - %: " + args.Percentage + " MB/s: " + ( args.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+    /// &lt;summary&gt;
+    /// Copy movie file from drop folder to internal movie folder
+    /// &lt;/summary&gt;
+    static void OnCreated_MovieFile( object sender, FileSystemEventArgs e )
+    {
+        var queueItem = new QuickIOTransferFileCopyJob( e.FullPath, movieFolder, overwrite: true );
+        TransferBackgroundService.Add( queueItem );
+    }
+    /// &lt;summary&gt;
+    /// Copy picture file from drop folder to internal picture folder
+    /// &lt;/summary&gt;
+    static void OnCreated_Picture( object sender, FileSystemEventArgs e )
+    {
+        var queueItem = new QuickIOTransferFileCopyJob( e.FullPath, pictureFolder, overwrite: true, parentExistanceCheck: false );
+        TransferBackgroundService.Add( queueItem );
+    }
+}
+</code></pre><br />
+            </div>
+            <div class="post-desc clearfix">
+                <h4>
+                    <strong>FileCopyService</strong> <small><a href="http://quickio.net/help/#type/QuickIOTransferFileCopyService" target="_blank">(online help link)</a></small>
+                </h4>
+                <p>
+                    processes one or multile file copy jobs, until the queue is empty.<br />
+                    All workers will be terminated automatically after the end of all jobs.
+                </p>
+                <pre><code>
+class Program
+{
+    static void Main( string[ ] args )
+    {
+       const string sourceDirectory = @"C:\transfer_test\source";
+       const string targetDirectory = @"C:\transfer_test\to";
+       // search file
+       var file = new QuickIOFileInfo( "file" );
+       var service = new QuickIOTransferFileCopyService( file, targetDirectory, threadCount: 1, retryCount: 3, overwrite: true );
+       
+       //  Progress information
+       service.Observer.FileCopyStarted += OnFileCopyStarted;
+       service.Observer.FileCopyProgress += OnFileCopyProgress;
+       service.Observer.FileCopyFinished += OnFileCopyFinished;
+       service.Observer.FileCopyError += ObserverOnFileCopyError;
+       // Same as (observer events are called first!):
+       //service.FileCopyStarted += OnFileCopyStarted;
+       //service.FileCopyProgress += OnFileCopyProgress;
+       //service.FileCopyFinished += OnFileCopyFinished;
+       //service.FileCopyError += ObserverOnFileCopyError;
+       
+       // Start progress
+       service.Start( ); // Blocks thread until finished
+       
+       Console.WriteLine( "Finished" );
+       Console.ReadKey( );
+    }
+    private static void ObserverOnFileCopyError( object sender, QuickIOTransferFileCopyErrorEventArgs e )
+    {
+       Console.WriteLine( "Error: " + e.SourcePath + " to " + e.TargetPath + ": " + e.Exception.Message );
+    }
+    private static void OnFileCopyStarted( object sender, QuickIOTransferFileCopyStartedEventArgs e )
+    {
+       Console.WriteLine( "Started: " + e.SourcePath + " to " + e.TargetPath + " (Bytes: " + e.TotalBytes + ")" );
+    }
+    private static void OnFileCopyFinished( object sender, QuickIOTransferFileCopyFinishedEventArgs e )
+    {
+       Console.WriteLine( "Finished: " + e.SourcePath + " - MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+    private static void OnFileCopyProgress( object sender, QuickIOTransferFileCopyProgressEventArgs e )
+    {
+       Console.WriteLine( "Progress: " + e.SourcePath + " - %: " + e.Percentage + " MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+    }
+}
+</code></pre><br />
+            </div>
+            <div class="post-desc clearfix">
+                <h4>
+                    <strong>DirectoryCopyService</strong> <small><a href="http://quickio.net/help/#type/QuickIOTransferDirectoryCopyService" target="_blank">(online help link)</a></small>
+                </h4>
+                <p>
+                    copies a complete directory. Searches all content and creates multiple file copy jobs.<br />
+                    All workers will be terminated automatically after the end of all jobs.
+                </p>
+                <pre><code>
+static void Main( string[ ] args )
+{
+    const string sourceDirectory = @"C:\transfer_test\source";
+    const string targetDirectory = @"C:\transfer_test\to";
+    // With observer
+    IQuickIOTransferObserver observer = new QuickIOTransferObserver( );
+    var service = new QuickIOTransferDirectoryCopyService( observer, new QuickIODirectoryInfo( sourceDirectory ), targetDirectory, threadCount: 1, retryCount: 3, searchOption: SearchOption.AllDirectories, overwrite: true );
+    // or without overload, to use default internal observer
+    // var service = new QuickIOTransferDirectoryCopyService( new QuickIODirectoryInfo( sourceDirectory ), targetDirectory, threadCount: 1, retryCount: 3, searchOption: SearchOption.AllDirectories, overwrite: true );
+    //  Progress information
+    service.Observer.DirectoryCreationError += ObserverOnDirectoryCreationError;
+    service.Observer.FileCopyStarted += OnFileCopyStarted;
+    service.Observer.FileCopyProgress += OnFileCopyProgress;
+    service.Observer.FileCopyFinished += OnFileCopyFinished;
+    service.Observer.FileCopyError += ObserverOnFileCopyError;
+    // Same as (observer events are called first!):
+    service.FileCopyStarted += OnFileCopyStarted;
+    service.FileCopyProgress += OnFileCopyProgress;
+    service.FileCopyFinished += OnFileCopyFinished;
+    service.FileCopyError += ObserverOnFileCopyError;
+    // Start progress
+    service.Start( ); // Blocks thread until finished
+    Console.WriteLine( "Finished" );
+    Console.ReadKey( );
+}
+private static void ObserverOnDirectoryCreationError( object sender, QuickIOTransferDirectoryCreationErrorEventArgs e )
+{
+    Console.WriteLine( "Error: Dir create '" + e.TargetPath + "' failed: " + e.Exception.Message );
+}
+private static void ObserverOnFileCopyError( object sender, QuickIOTransferFileCopyErrorEventArgs e )
+{
+    Console.WriteLine( "Error: " + e.SourcePath + " to " + e.TargetPath + ": " + e.Exception.Message );
+}
+private static void OnFileCopyStarted( object sender, QuickIOTransferFileCopyStartedEventArgs e )
+{
+    Console.WriteLine( "Started: " + e.SourcePath + " to " + e.TargetPath + " (Bytes: " + e.TotalBytes + ")" );
+}
+private static void OnFileCopyFinished( object sender, QuickIOTransferFileCopyFinishedEventArgs e )
+{
+    Console.WriteLine( "Finished: " + e.SourcePath + " - MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+}
+private static void OnFileCopyProgress( object sender, QuickIOTransferFileCopyProgressEventArgs e )
+{
+    Console.WriteLine( "Progress: " + e.SourcePath + " - %: " + e.Percentage + " MB/s: " + ( e.BytesPerSecond / 1024.0 / 1024.0 ).ToString( "0.0" ) );
+}
+</code></pre>
+                <br />
+            </div>
+        </div>
+
+    </script>
+</body>
+</html>	
